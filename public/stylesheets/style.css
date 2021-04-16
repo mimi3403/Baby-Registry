@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica;
+  color: #424748;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+    "nav"
+    "main"
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+body>nav {
+  grid-area: nav;
+  background-color: #fff6c1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px 20px 0 30px;
+}
+
+nav>a {
+  margin: 65px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
