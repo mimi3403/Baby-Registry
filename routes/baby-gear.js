@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const clothingCtrl = require('../controllers/clothing');
+const babyGearCtrl = require('../controllers/baby-gear');
 
-router.get('/', clothingCtrl.index);
+router.get('/', babyGearCtrl.index);
 
 module.exports = router;

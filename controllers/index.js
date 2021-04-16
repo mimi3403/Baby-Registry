@@ -1,7 +1,7 @@
 module.exports = {
-  clothing
+  index
 };
 
-function clothing(req, res) {
-  res.render('products/clothing');
+function index(req, res) {
+  res.render('index');
 }
