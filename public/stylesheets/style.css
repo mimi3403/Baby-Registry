@@ -14,12 +14,7 @@ body {
     "main"
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-}
-
-body>nav {
+#navbar {
   grid-area: nav;
   background-color: #fff6c1;
   display: flex;
@@ -28,9 +23,45 @@ body>nav {
   padding: 0px 20px 0 30px;
 }
 
+#navbar a {
+  text-decoration: none;
+  color: #333;
+}
+
+#navbar h1 {
+  float: left;
+  padding-top: 20px;
+}
+
+#navbar ul {
+  list-style: none;
+  float: right;
+}
+
+#navbar ul li {
+  float: left;
+}
+
+#navbar ul li a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current {
+  background-color: #444;
+  color: #f7c08a;
+}
+
 nav>a {
   margin: 65px;
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
 }
