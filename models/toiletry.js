@@ -5,7 +5,7 @@ const reviewSchema = new Schema({
   content: String,
 },{ timestamps: true});
 
-const clothingSchema = new Schema({
+const toiletrySchema = new Schema({
   imageURL: String,
   brand: String,
   productName: String,
@@ -14,4 +14,4 @@ const clothingSchema = new Schema({
   reviews: [reviewSchema],
 }, { timestamps: true });
 
-module.exports = mongoose.model('Clothing', clothingSchema);
+module.exports = mongoose.model('Toiletry', toiletrySchema);
