@@ -5,7 +5,7 @@ const reviewSchema = new Schema({
   content: String,
 },{ timestamps: true});
 
-const babyMustHaveSchema = new Schema({
+const babyMustHavesSchema = new Schema({
   imageURL: String,
   brand: String,
   productName: String,
