@@ -9,12 +9,33 @@
     </tr>
   </tbody>
   <a href="/<%=category %>">Go Back</a>
-  <h3>Reviews:</h3>
+  <!-- <h3>Reviews:</h3>
   <ul>
     <% item.reviews.forEach(review => { %>
       <li><%=review.content %></li>
   <% }) %>
-  </ul>
+  </ul> -->
+<% if(item.reviews.length) {%>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Review</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% item.reviews.forEach(review => { %>
+        <tr>
+          <td><%= review.createdAt.toLocaleDateString() %></td>
+          <td><%= review.content %></td>
+        </tr>
+     <% }) %>
+    </tbody>
+  </table>
+<% } else { %>
+  <h5>No Reivews Yet</h5>
+<% } %>
+
   <form action="/<%=category %>/<%=id %>/reviews" method="POST">
     <label>Rating:</label>
     <label>Leave a Review</label>
