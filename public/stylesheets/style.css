@@ -10,6 +10,7 @@ body {
   margin: 0;
   height: 100vh;
   display: grid;
+  font-family: 'Quicksand', sans-serif;
   grid-template-rows: 58px 50px 4fr;
   grid-template-areas:
     'header'
