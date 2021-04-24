@@ -28,6 +28,9 @@
         <tr>
           <td><%= review.createdAt.toLocaleDateString() %></td>
           <td><%= review.content %></td>
+          <form action="/<%=category %>/<%=id %>/reviews?_method=DELETE" method="POST">
+            <button type="sumbit">X</button>
+          </form>
         </tr>
      <% }) %>
     </tbody>

@@ -6,6 +6,7 @@ const Toiletry = require('../models/toiletry')
 
 module.exports = {
  create,
+ delete: deleteReview,
 }
 
 
@@ -55,3 +56,14 @@ function create(req, res) {
     })
   }
 }
+
+function deleteReview(req, res) {
+  if(req.params.category === 'clothing') {
+     Clothing.findById(req.params.id, function(err, item) {
+      item.reviews.splice(req.body.reviewID, 1)
+      item.save(function(){
+        res.redirect(`/${req.params.category}`);
+      })
+    })
+    }
+  }

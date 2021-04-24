@@ -62,7 +62,11 @@ header {
   text-align: center;
 }
 
-#navbar ul li a:hover,
+#navbar ul li a:hover {
+  /* background-color: #444; */
+  color: #f7c08a;
+}
+
 #navbar ul li a.current {
   /* background-color: #444; */
   color: #f7c08a;

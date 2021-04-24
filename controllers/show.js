@@ -6,7 +6,6 @@ const Toiletry = require('../models/toiletry')
 
 module.exports = {
  show,
- 
 }
 
 
@@ -51,7 +50,8 @@ function show(req, res) {
         id: req.params.id,
       })
     })
-  }if(req.params.category === 'toiletry') {
+  }
+  if(req.params.category === 'toiletry') {
     Toiletry.findById(req.params.id, function(err, item) {
       res.render('show', {
         item,
@@ -61,3 +61,6 @@ function show(req, res) {
     })
   }
 }
+
+
+

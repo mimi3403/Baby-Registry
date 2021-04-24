@@ -4,4 +4,5 @@ const showCtrl = require('../controllers/show');
 
 router.get('/:category/:id', showCtrl.show);
 
+
 module.exports = router;
