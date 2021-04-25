@@ -9,12 +9,7 @@
     </tr>
   </tbody>
   <a href="/<%=category %>">Go Back</a>
-  <!-- <h3>Reviews:</h3>
-  <ul>
-    <% item.reviews.forEach(review => { %>
-      <li><%=review.content %></li>
-  <% }) %>
-  </ul> -->
+
 <% if(item.reviews.length) {%>
   <table>
     <thead>
@@ -28,9 +23,14 @@
         <tr>
           <td><%= review.createdAt.toLocaleDateString() %></td>
           <td><%= review.content %></td>
-          <form action="/<%=category %>/<%=id %>/reviews?_method=DELETE" method="POST">
-            <button type="sumbit">X</button>
-          </form>
+          <td>
+            <form action="/<%=category %>/<%=id %>/reviews?_method=DELETE" method="POST">
+              <button type="sumbit">X</button>
+            </form>
+          </td>
+          <td>
+            <a href="/<%=category %>/<%=id %>/<%=review._id %>/reviews/edit">Edit a Review</a>
+          </td>
         </tr>
      <% }) %>
     </tbody>
