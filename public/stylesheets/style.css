@@ -81,7 +81,6 @@ header {
 }
 
 #navbar ul li a.current {
-  /* background-color: #444; */
   color: #f7c08a;
 }
 
@@ -104,12 +103,3 @@ footer {
   width: 100%;
   background-color: #fcf8e8
 }
-
-
-/* .navbar-center {
-  position: absolute;
-  width: 100%;
-  left: 35%;
-  top: 0;
-  text-align: center;
-} */
