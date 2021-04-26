@@ -11,9 +11,9 @@ A simple web application that shows essential baby products. 👶🏻
 - Mongoose Atlas
 
 ## Wireframes/ERD/Screenshots
-![wireframe](../images/wireframe.png)
-![wireframe2](../images/wireframe2.png)
-![ERD](../images/ERD.png)
+![wireframe](./images/wireframe.png)
+![wireframe2](./images/wireframe2.png)
+![ERD](./images/ERD.png)
 
 
 
