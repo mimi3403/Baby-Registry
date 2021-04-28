@@ -2,8 +2,6 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   color: #424748;
 }
 
@@ -12,6 +10,7 @@ body {
   height: 100vh;
   display: grid;
   font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
   grid-template-rows: 58px 50px 4fr 1fr;
   grid-template-areas:
     'header'
@@ -19,6 +18,21 @@ body {
     'main'
     'footer';
 }
+
+.background-img {
+  width: 100%;
+  align-items: center;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 
+.show-content {
+  height: 100vh;
+} */
+
 
 header {
   font-family: 'Sacramento', cursive;
@@ -34,7 +48,6 @@ header {
   justify-content: center;
   align-items: center;
   padding: 0px 20px 0 30px;
-  background-color: #fff;
 }
 
 #navbar a {
@@ -60,17 +73,17 @@ header {
 
 #navbar ul li a {
   display: block;
+  padding: 20px;
   text-align: center;
 }
 
 #navbar ul li a:hover {
-  background-color: #fff;
   color: #f7c08a;
 }
 
-/* #navbar ul li a.current {
+#navbar ul li a.current {
   color: #f7c08a;
-} */
+}
 
 nav>a {
   margin: 65px;
@@ -79,36 +92,61 @@ nav>a {
   border-radius: 5px;
 }
 
-.background-img {
-  width: 100%;
-  align-items: center;
-  height: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+h3,
+h4 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
 }
 
-.show-content {
-  height: 100vh;
+h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 12px;
+  margin: 15px;
+  cursor: pointer;
+  text-align: center;
+}
+
+a:hover {
+  color: #f7c08a;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+#items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 50px;
+  grid-column-gap: 15px;
+  margin: 40px auto 40px auto;
+  width: 100%;
 }
 
 .card {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  padding-bottom: 10px;
-  width: 350px;
-  height: 350px;
-  margin: 10px;
-  font-size: 20px;
+  align-items: center;
+  text-align: center;
 }
 
 footer {
   display: flex;
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
-  text-align: center;
+  justify-content: center;
   position: fixed;
   bottom: 0;
   margin: auto;

@@ -1,18 +1,19 @@
 <%- include('../partials/header') %>
 
-<h1>Clothing</h1>
+<!-- <h2>Clothing</h2> -->
 
-<article class="card">
-  <tbody>
+<div id="container">
+  <section id="items">
     <% clothing.forEach(function(item) { %>
-      <tr>
-        <td><%= item.brand %></td>
-        <td><%= item.productName %></td>
+      <article class="card">
+      <h3><%= item.brand %></h3>
+      <h4><%= item.productName %></h4>
        <img src="<%= item.imageURL %>" alt="img">
        <a href="/show/clothing/<%=item._id %>">See Details</a>
-      </tr>
+      </article>
       <% }); %>
-    </tbody>
-</article>
+  </section>
+</div>
+
 
 <%- include('../partials/footer') %>
