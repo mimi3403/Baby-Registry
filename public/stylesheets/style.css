@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   color: #424748;
 }
 
@@ -18,20 +20,6 @@ body {
     'footer';
 }
 
-.background-img {
-  width: 100%;
-  align-items: center;
-  height: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.show-content {
-  height: 100vh;
-}
-
-
 header {
   font-family: 'Sacramento', cursive;
   font-size: 40px;
@@ -46,6 +34,7 @@ header {
   justify-content: center;
   align-items: center;
   padding: 0px 20px 0 30px;
+  background-color: #fff;
 }
 
 #navbar a {
@@ -71,18 +60,17 @@ header {
 
 #navbar ul li a {
   display: block;
-  padding: 20px;
   text-align: center;
 }
 
 #navbar ul li a:hover {
-  background-color: #444;
+  background-color: #fff;
   color: #f7c08a;
 }
 
-#navbar ul li a.current {
+/* #navbar ul li a.current {
   color: #f7c08a;
-}
+} */
 
 nav>a {
   margin: 65px;
@@ -91,11 +79,36 @@ nav>a {
   border-radius: 5px;
 }
 
+.background-img {
+  width: 100%;
+  align-items: center;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.show-content {
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 10px;
+  width: 350px;
+  height: 350px;
+  margin: 10px;
+  font-size: 20px;
+}
+
 footer {
   display: flex;
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
-  justify-content: center;
+  text-align: center;
   position: fixed;
   bottom: 0;
   margin: auto;

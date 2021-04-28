@@ -2,15 +2,17 @@
 
 <h1>Clothing</h1>
 
-<tbody>
-  <% clothing.forEach(function(item) { %>
-    <tr>
-      <td><%= item.brand %></td>
-      <td><%= item.productName %></td>
-     <img src="<%= item.imageURL %>" alt="img">
-     <a href="/show/clothing/<%=item._id %>">See Details</a>
-    </tr>
-    <% }); %>
-  </tbody>
+<article class="card">
+  <tbody>
+    <% clothing.forEach(function(item) { %>
+      <tr>
+        <td><%= item.brand %></td>
+        <td><%= item.productName %></td>
+       <img src="<%= item.imageURL %>" alt="img">
+       <a href="/show/clothing/<%=item._id %>">See Details</a>
+      </tr>
+      <% }); %>
+    </tbody>
+</article>
 
 <%- include('../partials/footer') %>
