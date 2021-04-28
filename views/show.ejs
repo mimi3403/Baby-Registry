@@ -1,14 +1,15 @@
 <%- include('./partials/header') %>
-  <div class="show-content">
+
+  <div class="card">
   <tbody>
     <tr>
-      <td><%= item.brand %></td>
-      <td><%= item.productName %></td>
-     <img src="<%= item.imageURL %>" alt="img">
-     
+      <img src="<%= item.imageURL %>" alt="img">
+      <!-- <p><strong><%= item.brand %></strong><P>
+      <p><strong><%= item.productName %></strong><p> -->
+      <p><strong>Description: </strong> <br> <%= item.details %></p>
+      <p><strong>Price: &nbsp;</strong>$<%= item.price %></p>
     </tr>
   </tbody>
-  <a href="/<%=category %>">Go Back</a>
 
 <% if(item.reviews.length) {%>
   <table>
@@ -25,7 +26,7 @@
           <td><%= review.content %></td>
           <td>
             <form action="/<%=category %>/<%=id %>/reviews?_method=DELETE" method="POST">
-              <button type="sumbit">X</button>
+              <button class="delete" type="sumbit">X</button>
             </form>
           </td>
           <td>
@@ -36,15 +37,17 @@
     </tbody>
   </table>
 <% } else { %>
-  <h5>No Reivews Yet</h5>
+  <p><strong>No Reviews Yet</strong></p>
+
 <% } %>
 
   <form action="/<%=category %>/<%=id %>/reviews" method="POST">
-    <label>Rating:</label>
-    <label>Leave a Review</label>
-    <textarea name="content"></textarea>
-    <input type="submit" value="Add Review">
+    <p><strong>Leave a Review</strong></p>
+    <textarea name="content" cols="35" rows="8"></textarea>
+    <input class="add-review-btn" type="submit" value="Add Review">
   </form>
+    <a class="go-back" href="/<%=category %>">Go Back</a>
 </div>
+
 
 <%- include('./partials/footer') %>

@@ -1,16 +1,14 @@
 <%- include('../partials/header') %>
 
-  <h1>Baby-Gear</h1>
-
-  <tbody>
-    <% babyGear.forEach(function(item) { %>
-      <tr>
-        <td><%= item.brand %></td>
-        <td><%= item.productName %></td>
-       <img src="<%= item.imageURL %>" alt="img">
-       <a href="/show/babygear/<%=item._id %>">See Details</a>
-      </tr>
-      <% }); %>
-    </tbody>
+<section id="items">
+  <% babyGear.forEach(function(item) { %>
+    <article class="card">
+    <h3><%= item.brand %></h3>
+    <h4><%= item.productName %></h4>
+     <img src="<%= item.imageURL %>" alt="img">
+     <a href="/show/babygear/<%=item._id %>">See Details</a>
+    </article>
+    <% }); %>
+</section>
 
   <%- include('../partials/footer') %>

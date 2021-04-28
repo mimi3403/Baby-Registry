@@ -1,16 +1,14 @@
 <%- include('../partials/header') %>
 
-<h1>Toiletry</h1>
-
-<tbody>
+<section id="items">
   <% toiletry.forEach(function(item) { %>
-    <tr>
-      <td><%= item.brand %></td>
-      <td><%= item.productName %></td>
+    <article class="card">
+    <h3><%= item.brand %></h3>
+    <h4><%= item.productName %></h4>
      <img src="<%= item.imageURL %>" alt="img">
      <a href="/show/toiletry/<%=item._id %>">See Details</a>
-    </tr>
+    </article>
     <% }); %>
-  </tbody>
+</section>
 
 <%- include('../partials/footer') %>
