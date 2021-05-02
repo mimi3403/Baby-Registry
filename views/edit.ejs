@@ -1,11 +1,14 @@
 <%- include('./partials/header') %>
 
-<h1>Edit a Review</h1>
-
+<main>
+  <div class="card">
     <form action="/<%=category %>/<%=id %>/<%=review._id %>/reviews?_method=PUT" method="POST">
-      <input type="text" value="<%=review.content%>" name="reviews">
-      <input type="submit" value="Update a Review">
+      <textarea name="content" cols="35" rows="8"><%=review.content %></textarea>
+
+      <input class="update-review-btn" type="submit" value="Update a Review">
     </form>
+  </div>
+</main>
 
 
 
