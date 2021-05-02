@@ -15,11 +15,15 @@ A simple web application that shows essential baby products. 👶🏻
 ![wireframe2](./images/wireframe2.png)
 ![ERD](./images/ERD.png)
 
+## Final-Look!
+![homepage](./images/homepage.png)
+![productspage](./images/productspage.png)
+![detailspage](./images/detailspage.png)
 
 
 
 ## Getting Started
-[Click here]() to get started
+[Click here](https://hello-harper.herokuapp.com/) to get started
 
 ## Future Enhancements
-TBD
+Adding Oauth
