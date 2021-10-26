@@ -106,6 +106,18 @@ function deleteReview(req, res) {
   }
 }
  
+// function edit(req, res) {
+//   if(req.params.category === 'clothing'){
+//   Clothing.findById(req.params.id, function(err, item) {
+//     const review = item.reviews.find(review => review.id === req.params.itemId)
+//     res.render('edit', {
+//           item,
+//           category: req.params.category,
+//           id:req.params.id,
+//           review,
+//     })
+//   })
+// }
 function edit(req, res) {
   if(req.params.category === 'clothing'){
   Clothing.findById(req.params.id, function(err, item) {
@@ -166,12 +178,9 @@ if(req.params.category === 'toiletry') {
 
 function update(req, res) {
   if(req.params.category === 'clothing') {
-    Clothing.findById(req.params.id, function(err, item) {  
+      Clothing.findById(req.params.id, function(err, item) {  
       const updatedReview = item.reviews.find(review => review.id === req.params.itemId)
-      updatedReview.content = JSON.stringify(req.body);
-      let data = JSON.parse(updatedReview.content);
-      updatedReview.content = data.reviews;
-      updatedReview.markModified('updatedReview.content')
+      updatedReview.set(req.body);
       item.save(function(err){
         if(err) return err;
         res.redirect(`/${req.params.category}`)
